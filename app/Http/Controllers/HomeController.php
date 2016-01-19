@@ -40,7 +40,7 @@ class HomeController extends Controller
             ]);
             $file = $request->file('image');
             $ext = $request->file('image')->getMimeType();
-            $file->move('blog_images', $article->id . $file->getClientOriginalExtension());
+            $file->move('blog_images', $article->id . '.' . $file->getClientOriginalExtension());
 
         }
         return redirect('/home');
