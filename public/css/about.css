@@ -1,0 +1,176 @@
+.background{
+    position: relative;
+    overflow: hidden;
+    z-index: -1;
+    margin: 0;
+}
+.foreground{
+    position: relative;
+    z-index: 999;
+    margin: 0;
+    overflow: hidden;
+}
+.who_col{
+    padding-top: 2em;
+    background-color: #c7254e;
+    padding-bottom: 2em;
+    height: 350px;
+}
+.who_col>span{
+    padding-left: 0.5em;
+    font-size: 4em;
+    color: white;
+}
+.name_top>p{
+    padding-top: 10px;
+}
+.name_top>h1 {
+    font-family: 'Playfair Display', serif;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #2aabd2;
+}
+.name_bottom .col-lg-6>img{
+    height: 80px;
+}
+.img_center_logo{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+.name_bottom .who_project{
+    margin-bottom: 0;
+    border-bottom: 2px solid white;
+    color: white;
+}
+.name_bottom .what_aclr{
+    margin-bottom: 0;
+    background-color: #269abc;
+    color: white;
+    font-size: 1.3em;
+    font-family: "Helvetica Neue", "Segoe UI", Segoe, Helvetica, Arial, "Lucida Grande", sans-serif;
+    padding: 3px;
+}
+.summary>p{
+    font-size: 1.2em;
+    text-align: justify;
+}
+.experience_top {
+    color: white;
+    background-color: darkcyan;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.ex_fix_top{
+    padding-top: 20px;
+}
+.ex_fix_top .col-md-4>img{
+    width: 80%;
+    height: auto;
+}
+.ex_des{
+    padding-top: 3em;
+    padding-bottom: 2em;
+}
+.ex_des>span{
+    padding-top: 1em;
+    font-size: 4em;
+}
+.cover_text{
+    font-size: 5em;
+    text-align: center;
+    background-color: rgba(54, 25, 25, 0.5);
+    color: white;
+    padding: 10px;
+    width: 100%;
+    font-family: 'Georgia';
+}
+.ex_hr{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: azure;
+}
+.ex_hr .col-md-4>img{
+    width: 80%;
+    height: auto;
+}
+.education_top {
+    color: white;
+    background-color: blueviolet;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.cover_text_edu_video{
+    font-size: 4.5em;
+    text-align: left;
+    color:white;
+    padding-top: 0;
+    margin: 0;
+}
+.cover_text_edu{
+    font-size: 4.5em;
+    margin-top:100px;
+    text-align: left;
+    color: black;
+}
+.parallax_back{
+    width: 100%;
+    z-index: -99;
+    position: relative;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+}
+.video_edit{
+    position: absolute;
+    width: 80%;
+    bottom:1em;
+    left:5%;
+    right: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(0, 0, 0, 0.3);
+    color:white;
+    margin-bottom:2em;
+    padding: 1em;
+}
+.cover_text_parent{
+    position: absolute;
+    bottom: 20%;
+    z-index: 999;
+    padding: 0;
+}
+.front_banner{
+    height: 100% !important;
+    width: 100% !important;
+}
+.front_black{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+}
+.container_custom{
+    position: relative;
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    color: white;
+}
+.parallax_images{
+    width: 100%;
+}
+.work_images{
+    width: 100%;
+}
+.work > .container > .col-lg-4{
+    transition: all 0.5s;
+    overflow: hidden;
+    background-color: white;
+    height: 600px;
+}
