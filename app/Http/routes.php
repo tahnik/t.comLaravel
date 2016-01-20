@@ -12,10 +12,19 @@
 */
 
 Route::get('/', function () {
-    return view('index');
+    $articles = \App\Article::all();
+    return view('index')->with('articles', $articles);
 });
 Route::get('/about', function(){
     return view('about');
+});
+Route::get('/show_article/{id}', function($id){
+    $article = \App\Article::find($id);
+    $articles = \App\Article::orderBy('id', 'desc')->take(5)->get();
+    return view('showArticle')->with([
+        'article' => $article,
+        'articles' => $articles
+    ]);
 });
 
 /*

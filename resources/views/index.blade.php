@@ -36,6 +36,15 @@
 <div class="container" id="main_body">
     <div class="row">
         <div class="col-md-8">
+            @foreach($articles as $article)
+                <div class="articles">
+                    <h3 class="article_header text-center">{{ $article->title }}</h3>
+                    <span class="article_date">Date: {{ $article->datePublished }}</span>
+                    <img class="article_image" src="{{ url('/blog_images/' . $article->id . '.' . 'jpg') }}">
+                    <p class="article_body text-justify">{{ \Illuminate\Support\Str::limit($article->body, 300) }} <a
+                                href="{{ url('/show_article', $article->id) }}">Read More</a></p>
+                </div>
+            @endforeach
         </div>
         <div id="main_about" class="col-md-4">
             <img class="center-block img-circle" style="width:30%;margin-top:20px;" src="resources/pp.jpg" alt="tahnikmustasin">
