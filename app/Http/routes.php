@@ -11,21 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    $articles = \App\Article::all();
-    return view('index')->with('articles', $articles);
-});
-Route::get('/about', function(){
-    return view('about');
-});
-Route::get('/show_article/{id}', function($id){
-    $article = \App\Article::find($id);
-    $articles = \App\Article::orderBy('id', 'desc')->take(5)->get();
-    return view('showArticle')->with([
-        'article' => $article,
-        'articles' => $articles
-    ]);
-});
 
 /*
 |--------------------------------------------------------------------------
@@ -41,6 +26,21 @@ Route::get('/show_article/{id}', function($id){
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
 
+    Route::get('/', function () {
+        $articles = \App\Article::orderBy('id', 'desc')->get();
+        return view('index')->with('articles', $articles);
+    });
+    Route::get('/about', function(){
+        return view('about');
+    });
+    Route::get('/show_article/{id}', function($id){
+        $article = \App\Article::find($id);
+        $articles = \App\Article::orderBy('id', 'desc')->take(5)->get();
+        return view('showArticle')->with([
+            'article' => $article,
+            'articles' => $articles
+        ]);
+    });
 });
 Route::group(['middleware' => 'web'], function () {
     Route::resource('/home', 'HomeController');

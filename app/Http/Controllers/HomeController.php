@@ -45,4 +45,20 @@ class HomeController extends Controller
         }
         return redirect('/home');
     }
+    public function edit($id){
+        $article = Article::find($id);
+        return view('editArticle')->with('article', $article);
+    }
+    public function update(Request $request, $id){
+        Article::find($id)->update([
+            'title' => $request->title,
+            'body'  => $request->body,
+            'datePublished' => $request->datePublished
+        ]);
+        return redirect('/home');
+    }
+    public function destroy($id){
+        Article::find($id)->delete();
+        return redirect('/home');
+    }
 }

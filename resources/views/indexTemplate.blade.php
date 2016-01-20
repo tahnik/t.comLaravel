@@ -62,7 +62,13 @@
                 @yield('links')
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="{{ url('/login') }}">Control Panel</a></li>
+                <li><a href="{{ url('/home') }}">
+                        @if(\Illuminate\Support\Facades\Auth::check())
+                            {{ \Illuminate\Support\Facades\Auth::user()->name }}
+                        @else
+                            {{ 'Control Panel' }}
+                        @endif
+                    </a></li>
             </ul>
         </div>
     </div>

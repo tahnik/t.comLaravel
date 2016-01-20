@@ -385,6 +385,8 @@
                             <th>ID</th>
                             <th>Title</th>
                             <th>Publish Date</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -393,6 +395,12 @@
                                     <td>{{ $article->id }}</td>
                                     <td>{{ $article->title }}</td>
                                     <td>{{ $article->datePublished }}</td>
+                                    <td><a href="{{ url('/home/' .  $article->id . '/edit') }}">Edit</a></td>
+                                    <td>
+                                        {{ Form::open(['method' => 'delete' , 'url' => 'home/'.$article->id]) }}
+                                            {{ Form::submit('Delete', ['class' => 'btn btn default']) }}
+                                        {{ Form::close() }}
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>
