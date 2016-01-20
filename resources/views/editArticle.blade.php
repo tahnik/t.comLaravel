@@ -1,5 +1,12 @@
 @extends('indexTemplate')
 
+
+@section('title')
+    Tahnik's Blog @stop
+
+@section('description')
+    This is a blog created and maintained by Tahnik Mustasin @stop
+
 @section('links')
     <li><a href="{{ url('/home') }}">Home</a></li>
     <li><a href="{{ url('/home/create') }}">Create an Article</a></li>

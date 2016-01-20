@@ -1,5 +1,12 @@
 @extends('indexTemplate')
 
+
+@section('title')
+Tahnik's Blog @stop
+
+@section('description')
+This is a blog created and maintained by Tahnik Mustasin @stop
+
 @section('css')
     <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.10/css/jquery.dataTables.css">
     <style>

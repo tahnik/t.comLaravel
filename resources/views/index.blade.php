@@ -1,5 +1,11 @@
 @extends('indexTemplate')
 
+@section('title')
+Tahnik's Blog @stop
+
+@section('description')
+This is a blog created and maintained by Tahnik Mustasin @stop
+
 @section('social_script_top')
     <div id="fb-root"></div>
     <script>(function(d, s, id) {

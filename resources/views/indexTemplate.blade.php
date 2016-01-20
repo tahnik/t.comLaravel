@@ -18,10 +18,10 @@
     <meta name="distribution" content="global" />
     <meta name="keywords" content="tahnik, mustasin, queen, mary, university, london, electronic, computer, systems, engineering">
     <!--Setting some keyword for search engines -->
-    <meta name="description" content="This is daily blog created and maintained by Tahnik Mustasin">
+    <meta name="description" content="@yield('description')">
     <!-- Setting a description -->
     <meta name="language" content="English" />
-    <title>Tahnik's Blog</title>
+    <title>@yield('title')</title>
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/main.css">
     @yield('css')
