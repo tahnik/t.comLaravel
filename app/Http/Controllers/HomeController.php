@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Article;
 use App\Http\Requests;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -25,7 +26,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $articles = Article::all();
+        $articles = Article::where('user_id', Auth::user()->id)->get();
         return view('home')->with('articles', $articles);
     }
     public function create(){
@@ -34,8 +35,9 @@ class HomeController extends Controller
     public function store(Request $request){
         if($request->file('image')->isValid()) {
             $article = Article::create([
-                'title' => $request->title,
-                'body'  => $request->body,
+                'user_id'       => Auth::user()->id,
+                'title'         => $request->title,
+                'body'          => $request->body,
                 'datePublished' => $request->datePublished
             ]);
             $file = $request->file('image');
