@@ -33,6 +33,9 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/about', function(){
         return view('about');
     });
+    Route::get('/about.html', function(){
+        return redirect('/about');
+    });
     Route::get('/show_article/{id}', function($id){
         $article = \App\Article::find($id);
         $articles = \App\Article::orderBy('id', 'desc')->take(5)->get();
