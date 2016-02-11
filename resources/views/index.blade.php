@@ -47,7 +47,7 @@ This is a blog created and maintained by Tahnik Mustasin @stop
                     <h3 class="article_header text-center">{{ $article->title }}</h3>
                     <span class="article_date">Date: {{ $article->datePublished }}</span>
                     <img class="article_image" src="{{ url('/blog_images/' . $article->id . '.' . 'jpg') }}">
-                    <p class="article_body text-justify">{{ \Illuminate\Support\Str::limit($article->body, 300) }} <a
+                    <p class="article_body text-justify">{!! \Illuminate\Support\Str::limit($article->body, 300) !!} <a
                                 href="{{ url('/show_article', $article->id) }}">Read More</a></p>
                 </div>
             @endforeach
