@@ -38,7 +38,6 @@ nav.navbar.navbar-default a{
 }
 #f1{
 	height: 100%;
-	background-image: url("/resources/img1.jpg");
 	background-position: center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -48,7 +47,6 @@ nav.navbar.navbar-default a{
 }
 #f2{
 	height: 100%;
-	background-image: url("/resources/img2.jpg");
 	background-position: center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -57,7 +55,6 @@ nav.navbar.navbar-default a{
 }
 #f3{
 	height: 100%;
-	background-image: url("/resources/tahnik7.jpg");
 	background-position: center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;

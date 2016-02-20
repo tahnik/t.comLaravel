@@ -7,6 +7,17 @@ Tahnik's Blog @stop
 This is a blog created and maintained by Tahnik Mustasin @stop
 
 @section('social_script_top')
+    <style>
+        #f1{
+            background-image: url("{{ '/blog_images/' . $top_articles[0]->id . '.' . 'jpg' }}");
+        }
+        #f2{
+            background-image: url("{{ '/blog_images/' . $top_articles[1]->id . '.' . 'jpg' }}");
+        }
+        #f3{
+            background-image: url("{{ '/blog_images/' . $top_articles[2]->id . '.' . 'jpg' }}");
+        }
+    </style>
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
@@ -24,17 +35,17 @@ This is a blog created and maintained by Tahnik Mustasin @stop
     <div class="carousel-inner" role="listbox" >
         <div id="f3" class="item active">
             <div class="carousel-caption">
-                <span class="front_page">Bioshock Infinite is Awesome !</span>
+                <span class="front_page">{{ $top_articles[2]->title }}</span>
             </div>
         </div>
         <div id="f2" class="item">
             <div class="carousel-caption">
-                <span class="front_page">Nao Robot from Queen Mary</span>
+                <span class="front_page">{{ $top_articles[1]->title }}</span>
             </div>
         </div>
         <div id="f1" class="item">
             <div class="carousel-caption">
-                <span class="front_page">Intel Broadwell Processors are Out</span>
+                <span class="front_page">{{ $top_articles[0]->title }}</span>
             </div>
         </div>
     </div>

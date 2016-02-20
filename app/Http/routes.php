@@ -28,7 +28,11 @@ Route::group(['middleware' => 'web'], function () {
 
     Route::get('/', function () {
         $articles = \App\Article::orderBy('id', 'desc')->get();
-        return view('index')->with('articles', $articles);
+        $top_articles = \App\Article::orderBy('id', 'desc')->take(3)->get();
+        return view('index')->with([
+            'articles' => $articles,
+            'top_articles' => $top_articles
+        ]);
     });
     Route::get('/about', function(){
         return view('about');
